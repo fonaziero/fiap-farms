@@ -34,7 +34,7 @@ if (validIps.length > 0) {
 
   fs.writeFileSync(envPath, envContent);
 
-  console.log(`✅ .env criado em fiap-farms-mobile com IP ${ip}`);
+  console.log(`${ip}`);
 } else {
-  console.error('❌ Nenhum IP de rede válido encontrado.');
+  console.error(' Nenhum IP de rede válido encontrado.');
 }
