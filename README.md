@@ -1,13 +1,3 @@
-Perfeito! Aqui está a versão aprimorada do seu `README.md`, agora com:
-
-- ✅ **Badges**
-- 📽️ **GIF de demonstração sugerido**
-- 🖼️ Estrutura visual clara
-- ✨ Pronto para publicar no GitHub
-
----
-
-```markdown
 # 🌾 Fiap Farms
 
 [![Node.js](https://img.shields.io/badge/node-20.x-green.svg)](https://nodejs.org/)
