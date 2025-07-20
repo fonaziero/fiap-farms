@@ -1,4 +1,6 @@
 const os = require('os');
+const fs = require('fs');
+const path = require('path');
 
 function listLocalIPv4s() {
   const interfaces = os.networkInterfaces();
@@ -26,7 +28,13 @@ if (validIps.length > 1) {
 
 if (validIps.length > 0) {
   const ip = validIps[0].address;
-  console.log(`EXPO_PUBLIC_WEB_DASHBOARD_URL=http://${ip}:5173`);
+  const envContent = `EXPO_PUBLIC_WEB_DASHBOARD_URL=http://${ip}:5173\n`;
+
+  const envPath = path.resolve(__dirname, '../fiap-farms-mobile/.env');
+
+  fs.writeFileSync(envPath, envContent);
+
+  console.log(`✅ .env criado em fiap-farms-mobile com IP ${ip}`);
 } else {
   console.error('❌ Nenhum IP de rede válido encontrado.');
 }
