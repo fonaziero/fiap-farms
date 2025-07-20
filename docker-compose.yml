@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: ./fiap-farms-dashboard
+    container_name: fiap-farms-web
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+
+  mobile:
+    build:
+      context: ./fiap-farms-mobile
+    container_name: fiap-farms-mobile
+    ports:
+      - "8081:8081"   # Metro Bundler
+      - "19000:19000" # Expo Go (App)
+      - "19001:19001" # Expo DevTools
+    environment:
+      - WEB_DASHBOARD_URL=http://host.docker.internal:5173
+    restart: unless-stopped

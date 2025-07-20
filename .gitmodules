@@ -1,0 +1,6 @@
+[submodule "fiap-farms-dashboard"]
+	path = fiap-farms-dashboard
+	url = https://github.com/fonaziero/fiap-farms-dashboard
+[submodule "fiap-farms-mobile"]
+	path = fiap-farms-mobile
+	url = https://github.com/fonaziero/fiap-farms-mobile
