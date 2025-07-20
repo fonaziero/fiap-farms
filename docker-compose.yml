@@ -4,6 +4,7 @@ services:
   web:
     build:
       context: ./fiap-farms-dashboard
+    image: vfornazi/fiap-farms-dashboard:latest
     container_name: fiap-farms-web
     ports:
       - "5173:80"
@@ -12,6 +13,7 @@ services:
   mobile:
     build:
       context: ./fiap-farms-mobile
+    image: vfornazi/fiap-farms-mobile:latest
     container_name: fiap-farms-mobile
     ports:
       - "8081:8081"   # Metro Bundler

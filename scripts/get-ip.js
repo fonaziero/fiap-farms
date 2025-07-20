@@ -7,10 +7,7 @@ function listLocalIPv4s() {
   for (const name of Object.keys(interfaces)) {
     for (const iface of interfaces[name]) {
       if (iface.family === 'IPv4' && !iface.internal) {
-        ips.push({
-          name,
-          address: iface.address
-        });
+        ips.push({ name, address: iface.address });
       }
     }
   }
@@ -23,7 +20,7 @@ const validIps = listLocalIPv4s();
 if (validIps.length > 1) {
   console.warn('⚠️ Múltiplos IPs encontrados. Usando o primeiro:');
   validIps.forEach((ip, idx) => {
-    console.log(`#${idx + 1}. ${ip.address} (${ip.name})`);
+    console.warn(`#${idx + 1}. ${ip.address} (${ip.name})`);
   });
 }
 
