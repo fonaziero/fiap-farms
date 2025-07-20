@@ -70,16 +70,10 @@ git clone https://github.com/fonaziero/fiap-farms.git
 cd fiap-farms
 ```
 
-### 2. Instale as dependências
+### 2. Rode o projeto com IP dinâmico
 
 ```bash
-npm install
-```
-
-### 3. Rode o projeto com IP dinâmico
-
-```bash
-npm run start:docker
+npm run start
 ```
 
 Esse comando irá:
@@ -103,7 +97,7 @@ Esse comando irá:
 
 ```bash
 # Reiniciar containers (caso algo quebre)
-docker-compose down && npm run start:docker
+docker-compose down && npm run start
 
 # Parar todos os serviços
 docker-compose down
@@ -140,13 +134,3 @@ MIT © [Victor Fornaziero](https://github.com/fonaziero)
 
 Abra uma [issue](https://github.com/fonaziero/fiap-farms/issues) ou entre em contato!
 ```
-
----
-
-### ✅ Próximos passos (opcional):
-
-- Crie a pasta `docs/` e salve o GIF com o nome `demo.gif`.
-- Confirme que seu `get-ip.js` está fora do `mobile` e dentro da raiz (`fiap-farms/scripts`).
-- Você pode renomear o comando de `start:docker` para `dev` para ficar mais intuitivo (`npm run dev`).
-
-Se quiser posso gerar o `.gif` ou montar um script de gravação para você usar. Deseja isso?
