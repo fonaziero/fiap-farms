@@ -11,8 +11,7 @@
 
 ## 🎥 Demonstração
 
-![Demonstração Fiap Farms](./docs/demo.gif)
-> *Sugestão:* Grave o uso com o [Expo Go](https://expo.dev/client) e o navegador lado a lado com OBS ou Screenity.
+![Demonstração Fiap Farms]([./docs/demo.gif](https://youtu.be/-CMZ-LT6ILM))
 
 ---
 
