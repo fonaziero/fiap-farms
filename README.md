@@ -83,7 +83,7 @@ fiap-farms/
 ### 1. Clone o projeto
 
 ```bash
-git clone https://github.com/fonaziero/fiap-farms.git
+git clone --recurse-submodules https://github.com/fonaziero/fiap-farms.git
 cd fiap-farms
 ```
 
@@ -163,7 +163,7 @@ docker-compose down
   * Angular `v20.1.0`
   * Expo Go no Android e iOS
   * Navegadores Chrome e Firefox
-* Sem necessidade de build nativo (apenas Expo Go)
+  * Sem necessidade de build nativo (apenas Expo Go)
 
 ---
 
