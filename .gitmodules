@@ -4,3 +4,6 @@
 [submodule "fiap-farms-mobile"]
 	path = fiap-farms-mobile
 	url = https://github.com/fonaziero/fiap-farms-mobile
+[submodule "fiap-farms-web-login"]
+	path = fiap-farms-web-login
+	url = https://github.com/fonaziero/fiap-farms-web-login.git
