@@ -1,3 +1,4 @@
+// scripts/generate-env.js
 const os = require('os');
 const fs = require('fs');
 const path = require('path');
@@ -28,13 +29,23 @@ if (validIps.length > 1) {
 
 if (validIps.length > 0) {
   const ip = validIps[0].address;
-  const envContent = `EXPO_PUBLIC_WEB_DASHBOARD_URL=http://${ip}:5173\n`;
+  const dashboardUrl = `http://${ip}:5173`;
 
-  const envPath = path.resolve(__dirname, '../fiap-farms-mobile/.env');
+  const envContent = `EXPO_PUBLIC_WEB_DASHBOARD_URL=${dashboardUrl}\n`;
+  const tsContent = `// Este arquivo é gerado automaticamente. Não edite manualmente.
+export const environment = {
+  EXPO_PUBLIC_WEB_DASHBOARD_URL: '${dashboardUrl}',
+};
+`;
 
-  fs.writeFileSync(envPath, envContent);
+  const envPathMobile = path.resolve(__dirname, '../fiap-farms-mobile/.env');
+  const envPathWebLogin = path.resolve(__dirname, '../fiap-farms-web-login/.env');
+  const envPathGeneratedTs = path.resolve(__dirname, '../fiap-farms-web-login/src/environments/environment.generated.ts');
 
-  console.log(`${ip}`);
+  fs.writeFileSync(envPathMobile, envContent);
+  fs.writeFileSync(envPathWebLogin, envContent);
+  fs.writeFileSync(envPathGeneratedTs, tsContent);
+
 } else {
-  console.error(' Nenhum IP de rede válido encontrado.');
+  console.error('Nenhum IP de rede válido encontrado.');
 }

@@ -2,6 +2,7 @@
     "name": "fiap-farms",
     "version": "1.0.0",
     "scripts": {
-        "start": "node scripts/get-ip.js > .env && docker-compose up --build"
+        "start": "node scripts/start.js",
+        "start:docker": "node scripts/get-ip.js > .env && docker-compose up --build"
     }
 }

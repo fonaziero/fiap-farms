@@ -10,6 +10,15 @@ services:
       - "5173:80"
     restart: unless-stopped
 
+  web-login:
+    build:
+      context: ./fiap-farms-web-login
+    image: vfornazi/fiap-farms-web-login:latest
+    container_name: fiap-farms-web-login
+    ports:
+      - "5174:80"  
+    restart: unless-stopped
+
   mobile:
     build:
       context: ./fiap-farms-mobile
