@@ -29,6 +29,7 @@ fiap-farms/
 ├── fiap-farms-web-login/     # Login Web (Angular + TailwindCSS)
 ├── scripts/
 │   └── get-ip.js             # Detecta o IP local para uso no app mobile
+│   └── start.js              # Inicia o app
 ├── docker-compose.yml        # Orquestra os containers web + mobile + login
 └── package.json              # Comando de inicialização unificada
 ```
